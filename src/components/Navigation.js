@@ -40,13 +40,13 @@ function Navigation() {
         </ul>
       </div>
       <div className="flex w-1/3 items-center justify-end ">
-        <NavLink to="/shopingcart" className="relative lg:ml-6 ml-2">
+        <NavLink to="/shopingcart" className="relative lg:ml-4 ml-2">
           <span className="rounded-full w-6 h-6 flex justify-center items-center bottom-5 left-5 bg-black text-yellow-200 absolute" >0</span>
           <CgShoppingCart className="text-3xl"/>
         </NavLink>
-        <NavLink to="/login" className="flex items-center">
+        <NavLink to="/register" className="flex items-center">
+          <HiOutlineLogin className="text-3xl ml-2" />
           ورود
-          <HiOutlineLogin className="text-3xl" />
         </NavLink>
       </div>
     </nav>
