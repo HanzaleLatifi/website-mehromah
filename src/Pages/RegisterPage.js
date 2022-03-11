@@ -2,6 +2,8 @@ import { useFormik } from "formik";
 import { Link, withRouter } from "react-router-dom";
 import * as Yup from "yup";
 import Input from "../common/Input";
+import { useDispatch } from "react-redux";
+import { register } from "../feature/auth/authSlice";
 
 const initialValues = {
   username: "",
@@ -19,10 +21,13 @@ const validationSchema = Yup.object({
   passwordConfirm: Yup.string()
     .required("رمز عبور خود را مجددا وارد كنيد")
     .oneOf([Yup.ref("password"), null], "با رمز شما مطابقت ندارد"),
-  phoneNumber: Yup.string().required("شماره همراه خود را وارد كنيد"),
+  phoneNumber: Yup.number("شماره وارد شده نامعتبر است !").required("شماره همراه خود را وارد كنيد"),
 });
 
 function RegisterPage({history}) {
+
+  const dispatch=useDispatch() 
+
   const onSubmit = (values) => {
     const { username, email, phoneNumber, password } = values;
     const userdata = {
@@ -32,7 +37,8 @@ function RegisterPage({history}) {
       phoneNumber,
     };
     try {
-      // setAuth(userdata)
+      
+      dispatch(register(userdata))
       history.push("/");
     } catch (error) {}
   };

@@ -2,6 +2,9 @@ import { useFormik } from "formik";
 import { Link, withRouter } from "react-router-dom";
 import * as Yup from "yup";
 import Input from "../common/Input";
+import {useSelector , useDispatch} from 'react-redux';
+import { login } from "../feature/auth/authSlice";
+
 
 const initialValues = {
   email: "",
@@ -9,11 +12,13 @@ const initialValues = {
  
 };
 const validationSchema = Yup.object({
-  email: Yup.string().email("ایمیل نا معتبر است").required("لطفا نام کاربری خود را وارد كنيد"),
+  email: Yup.string().email("ایمیل نا معتبر است").required("لطفا نام ایمیل خود را وارد كنيد"),
   password: Yup.string().required("رمز عبور خود را وارد كنيد"),
 });
 
 function LoginPage({history}) {
+
+  const dispatch=useDispatch();
   const onSubmit = (values) => {
     const { email , password } = values;
     const userdata = {
@@ -22,6 +27,7 @@ function LoginPage({history}) {
      
     };
     try {
+      dispatch(login(userdata))
       // setAuth(userdata)
       history.push("/");
     } catch (error) {}
@@ -36,11 +42,11 @@ function LoginPage({history}) {
   return (
     <div className="rounded-xl bg-yellow-200 lg:w-1/4 mx-auto my-4 lg:my-20 ">
       <form onSubmit={formik.handleSubmit} className="p-4 flex flex-col items-center ">
-        <Input formik={formik} label="نام کاربری" name="email" />
+        <Input formik={formik} label="ایمیل" name="email" />
 
         <Input
           formik={formik}
-          label="رمز عبور"
+          label="رمزعبور"
           name="password"
           type="password"
         />

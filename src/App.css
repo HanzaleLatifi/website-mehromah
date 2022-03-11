@@ -4,3 +4,7 @@
 body{
     background-color: #f3f3f3;
 }
+button:disabled{
+    cursor: not-allowed;
+    background: rgb(206, 137, 137);
+}

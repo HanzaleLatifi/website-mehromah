@@ -32,7 +32,7 @@ function Slider() {
           aria-label="Slide 3"
         ></button>
       </div>
-      <div className="carousel-inner relative w-full overflow-hidden rounded-3xl">
+      <div className="carousel-inner shadow-inner  relative w-full overflow-hidden rounded-3xl">
         <div className="carousel-item active relative float-left w-full">
           <img
             src={slide1}

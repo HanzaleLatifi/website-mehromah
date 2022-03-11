@@ -1,7 +1,6 @@
 import React from "react";
 import Slider from "../components/Slider";
 
-
 function HomePage() {
   return (
     <div className="w-full  flex lg:my-6 md:my-4 p-2 lg:px-12">
