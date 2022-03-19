@@ -2,8 +2,19 @@ import { NavLink, withRouter } from "react-router-dom";
 import blacklogo from "../assets/logo2.png";
 import { CgShoppingCart } from "react-icons/cg";
 import { HiOutlineLogin } from "react-icons/hi";
+import {useSelector} from 'react-redux'
+import { useEffect } from "react";
+import Dropdown from "./Dropdown";
 
 function Navigation() {
+
+  const { user } = useSelector(
+    (state) => state.auth
+  ) 
+
+
+  
+
   return (
     <nav className="flex items-center text-lg shadow-lg  justify-between w-full sticky  md:px-4  lg:px-12 py-4 bg-pink-700 text-white ">
       <div className="flex w-2/3  items-center ">
@@ -44,9 +55,13 @@ function Navigation() {
           <span className="rounded-full w-6 h-6 flex justify-center items-center bottom-5 left-5 bg-black text-yellow-200 absolute" >0</span>
           <CgShoppingCart className="text-3xl"/>
         </NavLink>
+
         <NavLink to="/register" className="flex items-center">
-          <HiOutlineLogin className="text-3xl ml-2" />
-          ورود
+          {user ? <Dropdown /> :
+          <><HiOutlineLogin className="text-3xl ml-2" />
+          ورود</>
+           }
+          
         </NavLink>
       </div>
     </nav>

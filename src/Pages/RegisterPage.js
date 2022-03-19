@@ -2,7 +2,7 @@ import { useFormik } from "formik";
 import { Link, withRouter } from "react-router-dom";
 import * as Yup from "yup";
 import Input from "../common/Input";
-import { useDispatch } from "react-redux";
+import { useDispatch ,useSelector } from "react-redux";
 import { register } from "../feature/auth/authSlice";
 
 const initialValues = {
@@ -26,7 +26,12 @@ const validationSchema = Yup.object({
 
 function RegisterPage({history}) {
 
-  const dispatch=useDispatch() 
+  const dispatch=useDispatch();
+
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.auth
+  )
+
 
   const onSubmit = (values) => {
     const { username, email, phoneNumber, password } = values;
@@ -36,11 +41,12 @@ function RegisterPage({history}) {
       password,
       phoneNumber,
     };
-    try {
-      
+    try {     
       dispatch(register(userdata))
       history.push("/");
-    } catch (error) {}
+    } catch (error) {
+
+    }
   };
   const formik = useFormik({
     initialValues,

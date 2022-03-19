@@ -19,6 +19,9 @@ const validationSchema = Yup.object({
 function LoginPage({history}) {
 
   const dispatch=useDispatch();
+  const { user, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.auth
+  ) 
   const onSubmit = (values) => {
     const { email , password } = values;
     const userdata = {
@@ -28,7 +31,6 @@ function LoginPage({history}) {
     };
     try {
       dispatch(login(userdata))
-      // setAuth(userdata)
       history.push("/");
     } catch (error) {}
   };

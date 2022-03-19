@@ -8,6 +8,8 @@ import QuestionsPage from "./Pages/QuestionsPage";
 import ShopingCart from "./Pages/ShopingCart";
 import store from "./feature/store";
 import { Provider } from "react-redux";
+import ProfilePage from "./Pages/ProfilePage";
+import UserOrders from "./Pages/UserOrders";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Provider store={store}>
         <Layout>
           <Switch>
+            <Route path="/userorders" component={UserOrders} />
+            <Route path="/profile" component={ProfilePage} />
             <Route path="/shopingcart" component={ShopingCart} />
             <Route path="/questions" component={QuestionsPage} />
             <Route path="/login" component={LoginPage} />
