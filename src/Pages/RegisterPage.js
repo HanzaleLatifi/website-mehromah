@@ -82,7 +82,7 @@ function RegisterPage({history}) {
           ثبت نام
         </button>
 
-        <Link to="/login">ورود به حساب كاربری</Link>
+        <Link to="/login" className="text-lg">ورود به حساب كاربری</Link>
       </form>
     </div>
   );

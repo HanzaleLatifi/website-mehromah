@@ -41,12 +41,11 @@ function Dropdown() {
           >
             <BiUser className="text-3xl"/>
             <svg
-            className="mx-2"
+            className="mx-2 w-2 ml-2"
               aria-hidden="true"
               focusable="false"
               data-prefix="fas"
               data-icon="caret-down"
-              className="w-2 ml-2"
               role="img"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 320 512"
@@ -121,6 +120,7 @@ function Dropdown() {
             </li>
             <li  >
               <Link
+              
               onClick={()=>dispatch(logout())}
                 className="
               dropdown-item
@@ -134,7 +134,7 @@ function Dropdown() {
               bg-transparent
               text-gray-700
               hover:bg-gray-200
-            "
+            " 
                 to="/"
               >
                 خروج

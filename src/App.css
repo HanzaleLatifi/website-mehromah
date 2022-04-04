@@ -1,5 +1,6 @@
 *{
     direction: rtl;
+    
 }
 body{
     background-color: #f3f3f3;
@@ -7,4 +8,8 @@ body{
 button:disabled{
     cursor: not-allowed;
     background: rgb(206, 137, 137);
+}
+::selection{
+    background: rgb(247, 245, 155);
+    color: black;
 }

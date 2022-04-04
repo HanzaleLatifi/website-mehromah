@@ -3,7 +3,6 @@ import blacklogo from "../assets/logo2.png";
 import { CgShoppingCart } from "react-icons/cg";
 import { HiOutlineLogin } from "react-icons/hi";
 import {useSelector} from 'react-redux'
-import { useEffect } from "react";
 import Dropdown from "./Dropdown";
 
 function Navigation() {
@@ -16,7 +15,7 @@ function Navigation() {
   
 
   return (
-    <nav className="flex items-center text-lg shadow-lg  justify-between w-full sticky  md:px-4  lg:px-12 py-4 bg-pink-700 text-white ">
+    <nav className="flex  items-center text-lg shadow-lg  justify-between w-full sticky  md:px-4  lg:px-12 py-4 bg-pink-700 text-white ">
       <div className="flex w-2/3  items-center ">
         <div className="w-12 h-12 ml-8">
           <img src={blacklogo} className="cover-fill" />
