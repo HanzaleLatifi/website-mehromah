@@ -1,9 +1,13 @@
 *{
     direction: rtl;
+    transition: all linear .2s;
     
 }
+html{
+  scroll-behavior: smooth;
+}
 body{
-    background-color: #f3f3f3;
+    background-color: #f2f3f3;
 }
 button:disabled{
     cursor: not-allowed;
@@ -13,3 +17,70 @@ button:disabled{
     background: rgb(247, 245, 155);
     color: black;
 }
+.active-nav{
+    color: yellow;
+
+}
+li{
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 3px;
+  }
+  
+  li::before {
+    content: '';
+    position: absolute;
+    ;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: #fffb0d;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+  
+  li:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  .btn {
+    padding: 0.4em 1.7em;
+    position: relative;
+    overflow: hidden;
+    background-color: #be185d;
+    text-align: center;
+    font-size: 22px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: white;
+   }
+   
+   .btn::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #fef08a;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   
+   .btn:hover::before {
+    width: 100%;
+   }
+   
+   .btn:hover {
+    color: #111;
+   }
+
+  
+

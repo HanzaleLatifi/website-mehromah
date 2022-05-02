@@ -6,7 +6,7 @@ function Slider() {
   return (
     <div
       id="carouselExampleCaptions"
-      className="carousel slide relative "
+      className="carousel slide relative shadow-xl rounded-3xl "
       data-bs-ride="carousel"
     >
       <div className="carousel-indicators bg-gray-400 rounded-full  absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
