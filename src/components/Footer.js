@@ -6,7 +6,7 @@ import { FaTelegram } from "react-icons/fa";
 
 function Footer() {
   return (
-    <div className="w-full bg-gray-800 lg:p-8 mt-8 flex items-center justify-between rounded-t-3xl ">
+    <div className="w-full bg-gray-800 lg:p-8 mt-8 flex items-center justify-between rounded-t-3xl " id="footer">
       <div className="flex flex-col  w-1/3 ">
         <strong className="text-yellow-200 text-2xl mb-2 text-center">
           درباره ما
@@ -32,8 +32,8 @@ function Footer() {
           <p className="tracking-widest"> 09389876868</p>
         </div>
         <div className="flex text-5xl mt-4 text-white">
-          <RiInstagramFill />
-          <RiWhatsappFill />
+          <a href="https://www.instagram.com/mehromahchap/?hl=en" target="_blank"><RiInstagramFill  /></a>
+          <a href="https://wa.me/989178843374" target="_blank"><RiWhatsappFill /></a>
           <FaTelegram />
         </div>
       </div>

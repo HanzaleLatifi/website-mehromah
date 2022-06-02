@@ -10,6 +10,8 @@ function Navigation() {
   const { user } = useSelector(
     (state) => state.auth
   ) 
+  const cart=useSelector((state)=>state.cart)
+
 
   return (
     <nav className="flex  items-center text-lg shadow-lg  justify-between w-full sticky  rounded-b-3xl  md:px-4  lg:px-12 py-4 bg-pink-700 text-white ">
@@ -31,13 +33,13 @@ function Navigation() {
 
           <li>
             <NavLink to="/order" activeClassName="active-nav">
-              سفارش
+              سفارش محصول
             </NavLink>
           </li>
           <li>
-            <NavLink to="/aboutus" activeClassName="active-nav">
+            <a href="#footer" >
               درباره ما
-            </NavLink>
+            </a>
           </li>
           <li>
             <NavLink to="/faq" activeClassName="active-nav">
@@ -48,8 +50,8 @@ function Navigation() {
       </div>
       <div className="flex w-1/3 items-center justify-end ">
         <NavLink to="/shopingcart" className="relative lg:ml-4 ml-2   hover:text-yellow-200 transform transition-all hover:translate-y-1">
-          <span className="rounded-full w-6 h-6 flex justify-center items-center bottom-5 left-5 bg-black text-yellow-200 absolute" >0</span>
-          <CgShoppingCart className="text-3xl"/>
+          <span className="rounded-full  w-6 h-6 flex justify-center items-center bottom-5 left-5 bg-black text-yellow-200 absolute" >{cart.length}</span>
+          <CgShoppingCart  className="text-3xl"/>
         </NavLink>
 
         <NavLink to="/login" className="flex items-center hover:text-yellow-200 transform transition-all hover:translate-y-1">

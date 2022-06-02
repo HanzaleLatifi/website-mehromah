@@ -9,9 +9,9 @@ function Dropdown() {
   const dispatch=useDispatch();
   
   return (
-    <div className="flex justify-center">
-      <div>
-        <div className="dropdown relative">
+    <div className="flex justify-center z-50">
+      <div className="z-50 ">
+        <div className="dropdown relative z-50 ">
           <Link
             className="
           dropdown-toggle
@@ -21,6 +21,7 @@ function Dropdown() {
           font-medium
           text-md
           leading-tight
+          z-50
           rounded
           shadow-md
           hover:bg-yellow-200 hover:shadow-lg hover:text-black
@@ -61,7 +62,6 @@ function Dropdown() {
           dropdown-menu
           min-w-max
           absolute
-          hidden
           bg-white
           z-1000
           float-left
@@ -72,7 +72,6 @@ function Dropdown() {
           shadow-lg
           mt-1
           hidden
-          m-0
           bg-clip-padding
           border-none
         "

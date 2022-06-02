@@ -28,6 +28,7 @@ export const getAysncProfile = createAsyncThunk(
 );
 
 const initialState = {
+  id:0,
   email: "",
   name: "", 
   last_name: "",
@@ -45,6 +46,7 @@ const profileSlice = createSlice({
 
   extraReducers: (builder) => {
     builder.addCase(getAysncProfile.fulfilled, (state, action) => {
+      state.id=action.payload.user.id
       state.email = action.payload.user.email;
       state.name = action.payload.name;
       state.last_name = action.payload.last_name;

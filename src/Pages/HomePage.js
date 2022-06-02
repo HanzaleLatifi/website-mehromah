@@ -15,22 +15,22 @@ function HomePage() {
 
   return (
     <>
-      <div className="w-full flex lg:my-2 md:my-4 p-2 lg:px-4">
+      <div className="w-full flex lg:my-2 md:my-4 p-2 lg:px-4 z-0  ">
         <section className="w-1/4 flex flex-col  ">
           <div className=" bg-yellow-100 rounded-3xl lg:mb-6 transition-all hover:bg-yellow-200 shadow-lg ">
-            <div className="">
+            <div className="transform hover:-translate-y-1">
               <img src={img1} className="w-full h-full rounded-3xl" />
             </div>
-            <button className="text-2xl w-full text-center  py-2 ">
+            <button className="text-xl w-full text-center  py-2 ">
               ثبت سفارش طراحی
             </button>
           </div>
 
           <div className=" bg-yellow-100 rounded-3xl transition-all hover:bg-yellow-200 shadow-lg">
-            <div className="">
+            <div className="transform hover:-translate-y-1">
               <img src={img3} className="w-full h-full rounded-3xl" />
             </div>
-            <button className="text-2xl w-full text-center  py-2">
+            <button className="text-xl w-full text-center  py-2">
               مشاهده محصولات جدید
             </button>
           </div>
@@ -39,21 +39,21 @@ function HomePage() {
           <Slider />
         </section>
 
-        <section className="flex flex-col w-1/4 ">
-          <div className=" bg-yellow-100 rounded-3xl lg:mb-6 transition-all hover:bg-yellow-200 shadow-lg">
-            <div className="">
+        <section className="flex flex-col w-1/4   ">
+          <div className="  bg-yellow-100 rounded-3xl lg:mb-6 transition-all hover:bg-yellow-200 shadow-lg">
+            <div className="transform hover:-translate-y-1">
               <img src={img4} className="w-full h-full rounded-3xl" />
             </div>
-            <button className="text-2xl w-full text-center  py-2">
+            <button className="text-xl w-full text-center   py-2">
                 پیگیری سفارشات
             </button>
           </div>
 
-          <div className=" bg-yellow-100 rounded-3xl transition-all hover:bg-yellow-200 shadow-lg ">
-            <div className="">
+          <div className=" bg-yellow-100 rounded-3xl transition-all  hover:bg-yellow-200  shadow-lg ">
+            <div className="transform hover:-translate-y-1">
               <img src={img2} className="w-full h-full rounded-3xl" />
             </div>
-            <button className="text-2xl w-full text-center  py-2">
+            <button className="text-xl w-full text-center py-2">
               تماس با ما
             </button>
           </div>

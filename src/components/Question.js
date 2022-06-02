@@ -11,11 +11,11 @@ function Question({ques , answer , id , target, isShow}) {
     relative
     flex
     items-center
-    text-2xl
+    text-xl
     w-full
     py-4
     px-5
-    text-base text-pink-700 text-left
+    text-pink-700 text-left
     bg-white
     border-0
     transition
@@ -37,7 +37,7 @@ function Question({ques , answer , id , target, isShow}) {
       data-bs-parent="#accordionExample"
     >
       <div className="accordion-body  py-4 px-5 bg-yellow-100 ">
-        <p className='text-lg'> {answer} </p>
+        <p className='text-base font-light'> {answer} </p>
       </div>
     </div>
   </div>

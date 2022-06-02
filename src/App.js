@@ -12,6 +12,9 @@ import UserOrders from "./Pages/UserOrders";
 import FaqPgae from "./Pages/FaqPgae";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import OrderPage from "./Pages/OrderPage";
+import OrderForm from "./Pages/OrderForm";
+import FactorPage from "./Pages/FactorPage";
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
             }}
           />
           <Switch>
+            <Route path="/factor" component={FactorPage} /> 
+            <Route path="/orderform" component={OrderForm} />
+            <Route path="/order" component={OrderPage} />
             <Route path="/userorders" component={UserOrders} />
             <Route path="/profile" component={ProfilePage} />
             <Route path="/shopingcart" component={ShopingCart} />

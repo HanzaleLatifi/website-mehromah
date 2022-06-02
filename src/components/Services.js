@@ -7,7 +7,7 @@ import { useEffect } from "react";
 function Services() {
 
   useEffect(() => {
-    Aos.init({duration:2000 , delay:200 })
+    Aos.init({duration:2000 , delay:300 })
    }, [])
 
   return (
@@ -25,7 +25,7 @@ export default Services
 
 function Service({text}){
   return(
-    <div data-aos="flip-left" className='bg-pink-700 shadow-2xl px-2 rounded-md ring-4 border-2 border-white ring-pink-700 w-40 h-36 flex justify-center mx-12 items-center'> 
+    <div data-aos="flip-left" className='bg-pink-700 shadow-2xl px-2 rounded-md ring-4 border-2 border-white ring-pink-700 w-40 h-36 flex justify-center mx-12 items-center' > 
        <p className='text-center text-lg transform  text-white'>{text}</p>
     </div>
   )

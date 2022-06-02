@@ -24,6 +24,7 @@ const getToken = () => {
 
 function ProfilePage() {
   const profile = useSelector((state) => state.profile);
+  console.log(profile)
   const dispatch = useDispatch();
   const [token, setToken] = useState(getToken());
   const [formData, setFormData] = useState({});

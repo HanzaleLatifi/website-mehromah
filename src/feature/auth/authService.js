@@ -15,7 +15,7 @@ const register = async (userData) => {
 // Login user
 const login = async (userData) => {
   const response = await axios.post('http://127.0.0.1:8000/api/accounts/login/',userData)
-
+  
   if (response.data) {
     sessionStorage.setItem('user', JSON.stringify(response.data))
   }
